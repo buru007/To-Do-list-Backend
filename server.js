@@ -7,7 +7,9 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({
-  origin: 'http://localhost:3000' // Replace with your frontend's URL
+  origin: ["https://to-do-list-zawq.onrender.com"], // Add your deployed frontend URL here
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"]
 }));
 
 // Middleware to parse JSON request body
